@@ -1,11 +1,11 @@
 # Variable name to check maintenance mode
-ENV_VAR_NAME="MAINTENANCE_MODE"
+#ENV_VAR_NAME="MAINTENANCE_MODE"
 
 # Check if the environment variable is set to "true"
-if [[ "${!ENV_VAR_NAME}" = "true" ]]; then
-  echo "Entering maintenance mode..."
-  php artisan down
-fi
+#if [[ "${!ENV_VAR_NAME}" = "true" ]]; then
+#  echo "Entering maintenance mode..."
+#  php artisan down
+#fi
 
 # Build assets using NPM
 npm run build
@@ -25,7 +25,7 @@ php artisan optimize:clear
 php artisan migrate --force
 
 # Check if the environment variable is set to "false" or not set at all
-if [[ "${!ENV_VAR_NAME}" = "false" ]] || [[ -z "${!ENV_VAR_NAME}" ]]; then
-  echo "Exiting maintenance mode..."
-  php artisan up
-fi
+#if [[ "${!ENV_VAR_NAME}" = "false" ]] || [[ -z "${!ENV_VAR_NAME}" ]]; then
+#  echo "Exiting maintenance mode..."
+#  php artisan up
+#fi
