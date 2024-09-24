@@ -1,11 +1,11 @@
-# Install PHP dependencies
-composer install --optimize-autoloader --no-dev
-
 # Install Node.js dependencies for Vite, Tailwind, etc.
-npm install
+npm install --include=dev
 
 # Build assets using NPM
 npm run build
+
+# Install PHP dependencies
+composer install --optimize-autoloader --no-dev
 
 # Clear cache
 php artisan cache:clear
