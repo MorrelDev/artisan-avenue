@@ -7,6 +7,9 @@
 #  php artisan down
 #fi
 
+# Install PHP dependencies
+composer install --optimize-autoloader --no-dev
+
 # Build assets using NPM
 npm run build
 
@@ -23,6 +26,7 @@ php artisan optimize:clear
 
 # Run any database migrations
 php artisan migrate --force
+php artisan optimize
 
 # Check if the environment variable is set to "false" or not set at all
 #if [[ "${!ENV_VAR_NAME}" = "false" ]] || [[ -z "${!ENV_VAR_NAME}" ]]; then
